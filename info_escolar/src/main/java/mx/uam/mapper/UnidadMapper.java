@@ -8,9 +8,9 @@ import mx.uam.entity.Unidad;
 
 @Mapper(componentModel = "spring", injectionStrategy = InjectionStrategy.CONSTRUCTOR)
 public interface UnidadMapper {
+    
     UnidadDTO unidadToUnidadDTO(Unidad unidad);
 
     Unidad unidadDTOToUnidad(UnidadDTO unidadDTO);
-
     
 }

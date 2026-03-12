@@ -9,15 +9,15 @@ public class AlumnoDTO {
     private Long matricula;
     private String nacionalidad;
     private Float promedio;
-    private Long materias_id;
     private Boolean graduado;
+    private Long grupos_id;
 
     //Constructor Vacio (para Spring)
     public AlumnoDTO(){
     }
 // Constructor Completo
     public AlumnoDTO(Long id, String nombre, String apellidoPaterno, String apellidoMaterno,
-                     Long matricula, String nacionalidad, Float promedio, Long materias_id, Boolean graduado){
+                     Long matricula, String nacionalidad, Float promedio, Boolean graduado, Long grupos_id){
         this.id = id;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
@@ -25,8 +25,8 @@ public class AlumnoDTO {
         this.matricula = matricula;
         this.nacionalidad = nacionalidad;
         this.promedio = promedio;
-        this.materias_id = materias_id;
         this.graduado = graduado;
+        this.grupos_id = grupos_id;
     }
     //Getters And Setters
 
@@ -87,19 +87,19 @@ public class AlumnoDTO {
         this.promedio = promedio;
     }
 
-    public Long getMaterias_id() {
-        return materias_id;
-    }
-
-    public void setMaterias_id(Long materias_id) {
-        this.materias_id = materias_id;
-    }
-
     public Boolean getGraduado() {
         return graduado;
     }
-
+    
     public void setGraduado(Boolean graduado) {
         this.graduado = graduado;
+    }
+    
+    public Long getGrupos_id() {
+        return grupos_id;
+    }
+
+    public void setGrupos_id(Long grupos_id) {
+        this.grupos_id = grupos_id;
     }
 }

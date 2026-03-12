@@ -10,7 +10,7 @@ public class ControllerJoshua {
         
     }
 
-    @GetMapping("/prueba")
+    @GetMapping("/pruebaJoshua")
     public String getMensaje(){
         return "Hola Joshua prueba";
     }
