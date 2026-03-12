@@ -1,6 +1,7 @@
 package mx.uam.dto;
 
 public class CarreraDTO {
+
     private Long id;
     private String nombre;
     private Long divisiones_id;

@@ -1,6 +1,7 @@
 package mx.uam.dto;
 
 public class DivisionDTO {
+
     private Long id;
     private String nombre;
     private Long unidades_id;

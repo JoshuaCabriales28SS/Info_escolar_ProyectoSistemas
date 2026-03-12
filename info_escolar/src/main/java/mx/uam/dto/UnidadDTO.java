@@ -4,7 +4,6 @@ public class UnidadDTO {
     private Long id;
     private String nombre;
 
-
 //Constructor Vacio (Spring)
 
     public UnidadDTO() {

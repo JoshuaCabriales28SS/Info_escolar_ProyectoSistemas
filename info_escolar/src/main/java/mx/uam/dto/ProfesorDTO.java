@@ -1,6 +1,7 @@
 package mx.uam.dto;
 
 public class ProfesorDTO {
+
     private Long id;
     private String nombre;
 

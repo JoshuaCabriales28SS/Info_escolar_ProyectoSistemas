@@ -1,6 +1,7 @@
 package mx.uam.dto;
 
 public class GrupoDTO {
+
     private Long id;
     private String grupo;
     private Long carreras_id;

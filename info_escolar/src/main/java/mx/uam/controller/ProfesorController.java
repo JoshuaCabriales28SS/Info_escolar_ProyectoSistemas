@@ -9,6 +9,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/profesores")
 public class ProfesorController {
+
     private final ProfesorService profesorService;
 
     public ProfesorController(ProfesorService profesorService){this.profesorService = profesorService;}

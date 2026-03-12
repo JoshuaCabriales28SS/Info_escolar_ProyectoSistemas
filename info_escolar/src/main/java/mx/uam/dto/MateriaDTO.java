@@ -1,7 +1,6 @@
 package mx.uam.dto;
 
 public class MateriaDTO {
-
     private Long id;
     private String nombre;
 
