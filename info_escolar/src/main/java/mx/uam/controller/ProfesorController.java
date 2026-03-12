@@ -24,6 +24,7 @@ public class ProfesorController {
     public List<ProfesorDTO> getProfesor() {
         return profesorService.getProfesor();
     }
+
     // GET BY ID
     @GetMapping("/{id}")
     public ProfesorDTO getProfesorByID(@PathVariable Long id) {
