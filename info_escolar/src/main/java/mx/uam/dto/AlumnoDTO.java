@@ -1,7 +1,6 @@
 package mx.uam.dto;
 
 public class AlumnoDTO {
-
     private Long id;
     private String nombre;
     private String apellidoPaterno;
