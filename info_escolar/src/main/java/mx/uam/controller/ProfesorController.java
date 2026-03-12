@@ -16,7 +16,7 @@ public class ProfesorController {
     //Create
     @PostMapping
     public ProfesorDTO createAlumno(@RequestBody ProfesorDTO profesorDTO) {
-        return profesorService.   createProfesor(profesorDTO);
+        return profesorService.createProfesor(profesorDTO);
     }
 
     // GET ALL
@@ -32,8 +32,7 @@ public class ProfesorController {
     }
     // UPDATE
     @PatchMapping("/{id}")
-    public ProfesorDTO updateProfesor(@PathVariable Long id,
-                                  @RequestBody ProfesorDTO profesorDTO) {
+    public ProfesorDTO updateProfesor(@PathVariable Long id, @RequestBody ProfesorDTO profesorDTO) {
         return profesorService.updateProfesor(id, profesorDTO);
     }
     // DELETE
