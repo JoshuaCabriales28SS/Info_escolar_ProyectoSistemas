@@ -23,7 +23,7 @@ public class ProfesorController {
     // GET ALL
     @GetMapping
     public List<ProfesorDTO> getProfesor() {
-        return profesorService.getProfesor();
+ return profesorService.getProfesores();
     }
 
     // GET BY ID

@@ -4,16 +4,19 @@ import mx.uam.dto.ProfesorDTO;
 
 import java.util.List;
 
+
 public interface ProfesorService {
 
 
-    ProfesorDTO createProfesor(ProfesorDTO profesorDTO);
+    List<ProfesorDTO>getProfesores();
 
-    List<ProfesorDTO> getProfesor();
+    ProfesorDTO getProfesor(Long id);
 
-    ProfesorDTO getProfesorById(Long id);
+    ProfesorDTO updateProfesor(Long id, ProfesorDTO profesorDTO);
 
     void deleteProfesor(Long id);
 
-    ProfesorDTO updateProfesor(Long id, ProfesorDTO profesorDTO);
+    ProfesorDTO createProfesor(ProfesorDTO profesorDTO);
+
+    ProfesorDTO getProfesorById(Long id);
 }
