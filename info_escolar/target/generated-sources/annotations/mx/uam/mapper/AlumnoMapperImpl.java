@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-03-12T12:58:18-0600",
+    date = "2026-03-14T17:05:24-0600",
     comments = "version: 1.5.3.Final, compiler: javac, environment: Java 25.0.2 (Oracle Corporation)"
 )
 @Component
@@ -28,7 +28,7 @@ public class AlumnoMapperImpl implements AlumnoMapper {
         alumnoDTO.setMatricula( alumno.getMatricula() );
         alumnoDTO.setNacionalidad( alumno.getNacionalidad() );
         alumnoDTO.setPromedio( (float) alumno.getPromedio() );
-        alumnoDTO.setGraduado( alumno.isGraduado() );
+        alumnoDTO.setGraduado( alumno.getGraduado() );
 
         return alumnoDTO;
     }

@@ -19,7 +19,7 @@ public class UnidadServiceImpl implements UnidadService {
     }
 
     @Override
-    public UnidadDTO create(UnidadDTO unidadDTO) {
+    public UnidadDTO createUnidad(UnidadDTO unidadDTO) {
 
         Unidad unidad = new Unidad();
 
@@ -50,7 +50,7 @@ public class UnidadServiceImpl implements UnidadService {
     }
 
     @Override
-    public UnidadDTO getUnidad(Long id) {
+    public UnidadDTO getUnidadById(Long id) {
 
         Unidad unidad = unidadRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Unidad no encontrada"));

@@ -40,7 +40,7 @@ public class GrupoServiceImpl implements GrupoService {
         Grupo grupo = new Grupo();
 
         grupo.setGrupo(grupoDTO.getGrupo());
-        grupo.setTrimestre(grupoDTO.getTrimeste());
+        grupo.setTrimestre(grupoDTO.getTrimestre());
 
         Carrera carrera = carreraRepository.findById(grupoDTO.getCarreras_id())
                 .orElseThrow(() -> new RuntimeException("Carrera no encontrada"));
@@ -73,7 +73,7 @@ public class GrupoServiceImpl implements GrupoService {
 
             dto.setId(grupo.getId());
             dto.setGrupo(grupo.getGrupo());
-            dto.setTrimeste(grupo.getTrimestre());
+            dto.setTrimestre(grupo.getTrimestre());
             dto.setCarreras_id(grupo.getCarrera().getId());
             dto.setProfesores_id(grupo.getProfesor().getId());
             dto.setMaterias_id(grupo.getMateria().getId());
@@ -93,7 +93,7 @@ public class GrupoServiceImpl implements GrupoService {
 
         dto.setId(grupo.getId());
         dto.setGrupo(grupo.getGrupo());
-        dto.setTrimeste(grupo.getTrimestre());
+        dto.setTrimestre(grupo.getTrimestre());
         dto.setCarreras_id(grupo.getCarrera().getId());
         dto.setProfesores_id(grupo.getProfesor().getId());
         dto.setMaterias_id(grupo.getMateria().getId());
@@ -108,7 +108,7 @@ public class GrupoServiceImpl implements GrupoService {
                 .orElseThrow(() -> new RuntimeException("Grupo no encontrado"));
 
         grupo.setGrupo(grupoDTO.getGrupo());
-        grupo.setTrimestre(grupoDTO.getTrimeste());
+        grupo.setTrimestre(grupoDTO.getTrimestre());
 
         Carrera carrera = carreraRepository.findById(grupoDTO.getCarreras_id())
                 .orElseThrow(() -> new RuntimeException("Carrera no encontrada"));
@@ -129,7 +129,7 @@ public class GrupoServiceImpl implements GrupoService {
 
         dto.setId(grupoUpdated.getId());
         dto.setGrupo(grupoUpdated.getGrupo());
-        dto.setTrimeste(grupoUpdated.getTrimestre());
+        dto.setTrimestre(grupoUpdated.getTrimestre());
         dto.setCarreras_id(grupoUpdated.getCarrera().getId());
         dto.setProfesores_id(grupoUpdated.getProfesor().getId());
         dto.setMaterias_id(grupoUpdated.getMateria().getId());

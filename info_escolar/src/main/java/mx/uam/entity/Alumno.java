@@ -1,18 +1,11 @@
 package mx.uam.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "alumnos")
 public class Alumno {
-    // Atributos
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
@@ -42,7 +35,8 @@ public class Alumno {
     @JoinColumn(name = "grupos_id")
     private Grupo grupo;
 
-    // Getters Setters
+    // GETTERS Y SETTERS
+
     public long getId() {
         return id;
     }
@@ -99,7 +93,7 @@ public class Alumno {
         this.promedio = promedio;
     }
 
-    public boolean Graduado() {
+    public boolean getGraduado() {
         return graduado;
     }
 
@@ -107,15 +101,11 @@ public class Alumno {
         this.graduado = graduado;
     }
 
-    public Long getGrupo_id() {
-        return grupo.getId();
+    public Grupo getGrupo() {
+        return grupo;
     }
 
-    public void setGrupos_id(Long gruposId) {
-    }
-
-
-    public Boolean getGraduado() {
-        return graduado;
+    public void setGrupo(Grupo grupo) {
+        this.grupo = grupo;
     }
 }

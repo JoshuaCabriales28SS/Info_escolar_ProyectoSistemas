@@ -2,7 +2,9 @@ package mx.uam.service.impl;
 
 import mx.uam.dto.AlumnoDTO;
 import mx.uam.entity.Alumno;
+import mx.uam.entity.Grupo;
 import mx.uam.repository.AlumnoRepository;
+import mx.uam.repository.GrupoRepository;
 import mx.uam.service.AlumnoService;
 import org.springframework.stereotype.Service;
 
@@ -12,9 +14,11 @@ import java.util.List;
 public class AlumnoServiceImpl implements AlumnoService {
 
     private final AlumnoRepository alumnoRepository;
+    private final GrupoRepository grupoRepository;
 
-    public AlumnoServiceImpl(AlumnoRepository alumnoRepository) {
+    public AlumnoServiceImpl(AlumnoRepository alumnoRepository, GrupoRepository grupoRepository) {
         this.alumnoRepository = alumnoRepository;
+        this.grupoRepository = grupoRepository;
     }
 
     @Override
@@ -28,7 +32,12 @@ public class AlumnoServiceImpl implements AlumnoService {
         alumno.setMatricula(alumnoDTO.getMatricula());
         alumno.setNacionalidad(alumnoDTO.getNacionalidad());
         alumno.setPromedio(alumnoDTO.getPromedio());
-        alumno.setGrupos_id(alumnoDTO.getGrupos_id());
+
+        Grupo grupo = grupoRepository.findById(alumnoDTO.getGrupos_id())
+                .orElseThrow(() -> new RuntimeException("Grupo no encontrado"));
+
+        alumno.setGrupo(grupo);
+
         alumno.setGraduado(alumnoDTO.getGraduado());
 
         Alumno alumnoSaved = alumnoRepository.save(alumno);
@@ -54,7 +63,7 @@ public class AlumnoServiceImpl implements AlumnoService {
             dto.setMatricula(alumno.getMatricula());
             dto.setNacionalidad(alumno.getNacionalidad());
             dto.setPromedio((float) alumno.getPromedio());
-            dto.setGrupos_id(alumno.getGrupo_id());
+            dto.setGrupos_id(alumno.getGrupo().getId());
             dto.setGraduado(alumno.getGraduado());
 
             return dto;
@@ -77,7 +86,7 @@ public class AlumnoServiceImpl implements AlumnoService {
         dto.setMatricula(alumno.getMatricula());
         dto.setNacionalidad(alumno.getNacionalidad());
         dto.setPromedio((float) alumno.getPromedio());
-        dto.setGrupos_id(alumno.getGrupo_id());
+        dto.setGrupos_id(alumno.getGrupo().getId());
         dto.setGraduado(alumno.getGraduado());
 
         return dto;
@@ -95,7 +104,12 @@ public class AlumnoServiceImpl implements AlumnoService {
         alumno.setMatricula(alumnoDTO.getMatricula());
         alumno.setNacionalidad(alumnoDTO.getNacionalidad());
         alumno.setPromedio(alumnoDTO.getPromedio());
-        alumno.setGrupos_id(alumnoDTO.getGrupos_id());
+
+        Grupo grupo = grupoRepository.findById(alumnoDTO.getGrupos_id())
+                .orElseThrow(() -> new RuntimeException("Grupo no encontrado"));
+
+        alumno.setGrupo(grupo);
+
         alumno.setGraduado(alumnoDTO.getGraduado());
 
         alumno = alumnoRepository.save(alumno);
@@ -109,7 +123,7 @@ public class AlumnoServiceImpl implements AlumnoService {
         dto.setMatricula(alumno.getMatricula());
         dto.setNacionalidad(alumno.getNacionalidad());
         dto.setPromedio((float) alumno.getPromedio());
-        dto.setGrupos_id(alumno.getGrupo_id());
+        dto.setGrupos_id(alumno.getGrupo().getId());
         dto.setGraduado(alumno.getGraduado());
 
         return dto;
