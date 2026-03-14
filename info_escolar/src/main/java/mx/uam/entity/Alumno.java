@@ -99,7 +99,7 @@ public class Alumno {
         this.promedio = promedio;
     }
 
-    public boolean isGraduado() {
+    public boolean Graduado() {
         return graduado;
     }
 
@@ -107,13 +107,15 @@ public class Alumno {
         this.graduado = graduado;
     }
 
-    public Grupo getGrupo() {
-        return grupo;
+    public Long getGrupo_id() {
+        return grupo.getId();
     }
 
-    public void setGrupo(Grupo grupo) {
-        this.grupo = grupo;
+    public void setGrupos_id(Long gruposId) {
     }
 
-    
+
+    public Boolean getGraduado() {
+        return graduado;
+    }
 }

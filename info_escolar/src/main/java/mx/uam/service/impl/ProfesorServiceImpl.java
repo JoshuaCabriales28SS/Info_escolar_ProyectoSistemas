@@ -82,8 +82,4 @@ public class ProfesorServiceImpl implements ProfesorService {
         profesorRepository.delete(profesor);
     }
 
-    @Override
-    public ProfesorDTO getProfesor(Long id) {
-        return getProfesorById(id);
-    }
 }

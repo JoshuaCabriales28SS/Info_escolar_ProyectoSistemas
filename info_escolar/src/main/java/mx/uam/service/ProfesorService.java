@@ -10,8 +10,6 @@ public interface ProfesorService {
 
     List<ProfesorDTO>getProfesores();
 
-    ProfesorDTO getProfesor(Long id);
-
     ProfesorDTO updateProfesor(Long id, ProfesorDTO profesorDTO);
 
     void deleteProfesor(Long id);

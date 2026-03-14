@@ -1,6 +1,7 @@
 package mx.uam.dto;
 
 public class AlumnoDTO {
+
     private Long id;
     private String nombre;
     private String apellidoPaterno;
@@ -11,12 +12,13 @@ public class AlumnoDTO {
     private Boolean graduado;
     private Long grupos_id;
 
-    //Constructor Vacio (para Spring)
-    public AlumnoDTO(){
+    // Constructor vacío (Spring lo necesita)
+    public AlumnoDTO() {
     }
-// Constructor Completo
+
+    // Constructor completo
     public AlumnoDTO(Long id, String nombre, String apellidoPaterno, String apellidoMaterno,
-                     Long matricula, String nacionalidad, Float promedio, Boolean graduado, Long grupos_id){
+                     Long matricula, String nacionalidad, Float promedio, Boolean graduado, Long grupos_id) {
         this.id = id;
         this.nombre = nombre;
         this.apellidoPaterno = apellidoPaterno;
@@ -27,8 +29,8 @@ public class AlumnoDTO {
         this.graduado = graduado;
         this.grupos_id = grupos_id;
     }
-    //Getters And Setters
 
+    // Getters y Setters
 
     public Long getId() {
         return id;
@@ -89,11 +91,11 @@ public class AlumnoDTO {
     public Boolean getGraduado() {
         return graduado;
     }
-    
+
     public void setGraduado(Boolean graduado) {
         this.graduado = graduado;
     }
-    
+
     public Long getGrupos_id() {
         return grupos_id;
     }
