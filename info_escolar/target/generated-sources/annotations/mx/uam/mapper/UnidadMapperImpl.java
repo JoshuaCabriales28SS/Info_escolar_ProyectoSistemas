@@ -7,8 +7,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2026-03-14T17:05:23-0600",
-    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 25.0.2 (Oracle Corporation)"
+    date = "2026-03-14T18:32:49-0600",
+    comments = "version: 1.5.3.Final, compiler: Eclipse JDT (IDE) 3.45.0.v20260224-0835, environment: Java 21.0.10 (Eclipse Adoptium)"
 )
 @Component
 public class UnidadMapperImpl implements UnidadMapper {
