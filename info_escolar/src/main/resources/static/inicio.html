@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title>Inicio - UAM</title>
+
+    <style>
+        body {
+            font-family: 'Barlow', sans-serif;
+            background: #e8edf5;
+            margin: 0;
+        }
+
+        /* NAVBAR */
+        .custom-navbar {
+            background: #142c52;
+            border-bottom: 3px solid #e8720c;
+            padding: 10px 32px;
+        }
+
+        .custom-navbar .nav-link {
+            color: #c9d8f0;
+            font-weight: 600;
+            margin-left: 12px;
+        }
+
+        .custom-navbar .nav-link:hover {
+            color: white;
+        }
+
+        .custom-navbar .nav-link.active {
+            color: #e8720c;
+        }
+
+        /* HERO */
+        .hero {
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .hero-box {
+            background: white;
+            padding: 50px;
+            border-radius: 16px;
+            box-shadow: 0 6px 28px rgba(10,25,60,.13);
+            max-width: 600px;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            color: #1a3660;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #6b7fa3;
+            margin-bottom: 25px;
+        }
+
+        .btn-custom {
+            background: #e8720c;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .btn-custom:hover {
+            background: #d4620a;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand text-white fw-bold" href="#">Sistema Escolar</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="nav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a class="nav-link active" href="#">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Información</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Alumnos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Profesores</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- CONTENIDO -->
+<section class="hero">
+    <div class="hero-box">
+        <h1>Bienvenido al Sistema Escolar</h1>
+        <p>Consulta información de alumnos, materias, profesores y más dentro del sistema de la UAM Cuajimalpa.</p>
+
+        <a href="index.html">
+            <button class="btn-custom">Ingresar al Sistema</button>
+        </a>
+    </div>
+</section>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
