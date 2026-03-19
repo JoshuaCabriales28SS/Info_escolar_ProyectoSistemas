@@ -1,17 +1,17 @@
 package mx.uam.service;
 
-import java.util.List;
-
 import mx.uam.dto.MateriaDTO;
 
-public interface MateriaService {
-    MateriaDTO create(MateriaDTO materiaDTO);
+import java.util.List;
 
-    List<MateriaDTO> getAll();
+public interface MateriaService  {
+    List<MateriaDTO> getMaterias();
 
-    MateriaDTO get(Long id);
+    MateriaDTO updateMateria(Long id, MateriaDTO materiaDTO);
 
-    MateriaDTO update(Long id, MateriaDTO materiaDTO);
+    void deleteMateria(Long id);
 
-    void delete(Long id);
+    MateriaDTO createMateria(MateriaDTO materiaDTO);
+
+    MateriaDTO getMateriaById(Long id);
 }

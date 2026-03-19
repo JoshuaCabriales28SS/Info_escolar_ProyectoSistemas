@@ -6,11 +6,11 @@ import mx.uam.dto.UnidadDTO;
 
 public interface UnidadService {
 
-    UnidadDTO create(UnidadDTO unidadDTO);
+    UnidadDTO createUnidad(UnidadDTO unidadDTO);
 
     List<UnidadDTO> getUnidades();
 
-    UnidadDTO getUnidad(Long id);
+    UnidadDTO getUnidadById(Long id);
 
     UnidadDTO updateUnidad(Long id, UnidadDTO unidadDTO);
 

@@ -1,91 +1,91 @@
 package mx.uam.service.impl;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-
 import mx.uam.dto.MateriaDTO;
 import mx.uam.entity.Materia;
 import mx.uam.repository.MateriaRepository;
 import mx.uam.service.MateriaService;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class MateriaServiceImpl implements MateriaService {
-    // Atributos
+
     private final MateriaRepository materiaRepository;
 
-    // Constructor
     public MateriaServiceImpl(MateriaRepository materiaRepository) {
         this.materiaRepository = materiaRepository;
     }
 
     @Override
-    public MateriaDTO create(MateriaDTO materiaDTO) {
-        Materia materia =new Materia();
+    public MateriaDTO createMateria(MateriaDTO materiaDTO) {
+
+        Materia materia = new Materia();
 
         materia.setNombre(materiaDTO.getNombre());
 
-        Materia materiaS = materiaRepository.save(materia);
+        Materia materiaSaved = materiaRepository.save(materia);
 
-        materiaDTO.setId(materiaS.getId());
-        
+        materiaDTO.setId(materiaSaved.getId());
+
         return materiaDTO;
     }
 
     @Override
-    public List<MateriaDTO> getAll() {
+    public List<MateriaDTO> getMaterias() {
+
         List<Materia> materias = materiaRepository.findAll();
 
-        List<MateriaDTO> materiaDTOs = new ArrayList<>();
+        return materias.stream().map(materia -> {
 
-        for (Materia materia: materias) {
-            MateriaDTO materiaDTO = new MateriaDTO();
+            MateriaDTO dto = new MateriaDTO();
 
-            materiaDTO.setId(materia.getId());
-            materiaDTO.setNombre(materia.getNombre());
+            dto.setId(materia.getId());
+            dto.setNombre(materia.getNombre());
 
-            materiaDTOs.add(materiaDTO);
-        }
-        
-        return materiaDTOs;
+            return dto;
+
+        }).toList();
     }
 
     @Override
-    public MateriaDTO get(Long id) {
+    public MateriaDTO getMateriaById(Long id) {
+
         Materia materia = materiaRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Materia no encontrada"));
-            
-            MateriaDTO materiaDTO = new MateriaDTO();
-            
-            materiaDTO.setNombre(materia.getNombre());
-        materiaDTO.setId(materia.getId());
-        
-        return materiaDTO;
+                .orElseThrow(() -> new RuntimeException("Materia no encontrada"));
+
+        MateriaDTO dto = new MateriaDTO();
+
+        dto.setId(materia.getId());
+        dto.setNombre(materia.getNombre());
+
+        return dto;
     }
 
     @Override
-    public MateriaDTO update(Long id, MateriaDTO materiaDTO) {
+    public MateriaDTO updateMateria(Long id, MateriaDTO materiaDTO) {
+
         Materia materia = materiaRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Materia no encontrada"));
+                .orElseThrow(() -> new RuntimeException("Materia no encontrada"));
 
         materia.setNombre(materiaDTO.getNombre());
 
-        Materia actualizado = materiaRepository.save(materia);
+        Materia materiaUpdated = materiaRepository.save(materia);
 
-        materiaDTO.setId(actualizado.getId());
-        materiaDTO.setNombre(actualizado.getNombre());
+        MateriaDTO dto = new MateriaDTO();
 
-        return materiaDTO;
+        dto.setId(materiaUpdated.getId());
+        dto.setNombre(materiaUpdated.getNombre());
+
+        return dto;
     }
-    
+
     @Override
-    public void delete(Long id) {
+    public void deleteMateria(Long id) {
+
         Materia materia = materiaRepository.findById(id)
-            .orElseThrow(() -> new RuntimeException("Materia no encontrada"));
+                .orElseThrow(() -> new RuntimeException("Materia no encontrada"));
 
         materiaRepository.delete(materia);
-
     }
-
 }

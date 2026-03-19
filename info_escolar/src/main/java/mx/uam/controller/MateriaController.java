@@ -1,56 +1,46 @@
 package mx.uam.controller;
 
-import java.util.List;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.PatchMapping;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.bind.annotation.PathVariable;
 
 import mx.uam.dto.MateriaDTO;
 import mx.uam.service.MateriaService;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
+@RequestMapping("/materias")
 public class MateriaController {
-    // Atributos
+
     private final MateriaService materiaService;
 
-    // Constructor
-    public MateriaController(MateriaService materiaService) {
+    public MateriaController(MateriaService materiaService){
         this.materiaService = materiaService;
     }
 
-    // POST
-    @PostMapping("/materias")
-    public MateriaDTO createAlumno(@RequestBody MateriaDTO materiaDTO) {
-        MateriaDTO materiaDTOS = materiaService.create(materiaDTO);
-        return materiaDTOS;
+    //Create
+    @PostMapping
+    public MateriaDTO createMateria(@RequestBody MateriaDTO materiaDTO){
+        return materiaService.createMateria(materiaDTO);
+    }
+    //Obtener todos
+    @GetMapping
+    public List<MateriaDTO> getMaterias(){
+        return materiaService.getMaterias();
+    }
+    //Obtener por ID
+    @GetMapping("/{id}")
+    public MateriaDTO getMateriaByID(@PathVariable Long id){
+        return materiaService.getMateriaById(id);
     }
 
-    // GET
-    @GetMapping("/materias")
-    public List<MateriaDTO> getAll() {
-        return materiaService.getAll();
+    //Actualizar
+    @PatchMapping("/{id}")
+    public MateriaDTO updateMateria(@PathVariable Long id, @RequestBody MateriaDTO materiaDTO){
+        return materiaService.updateMateria(id, materiaDTO);
     }
 
-    // GET
-    @GetMapping("/materias/{id}")
-    public MateriaDTO getMateria(@PathVariable Long id) {
-        return materiaService.get(id);
-    }
-
-    // PATCH
-    @PatchMapping("/materias/{id}")
-    public MateriaDTO updateMateria(@PathVariable Long id, @RequestBody MateriaDTO materiaDTO) {
-        return materiaService.update(id, materiaDTO);
-    }
-
-    // DELETE
-    @DeleteMapping("/materias/{id}")
-    public void deleteMateria(@PathVariable Long id) {
-        materiaService.delete(id);
+    @DeleteMapping("/{id}")
+    public void deleteMateria(@PathVariable Long id){
+        materiaService.deleteMateria(id);
     }
 }
