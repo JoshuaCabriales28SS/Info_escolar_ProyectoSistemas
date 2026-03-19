@@ -18,7 +18,7 @@ public class Division {
     private long id;
 
     @Column(name = "nombre")
-    private String nomnbre;
+    private String nombre;
 
     @ManyToOne
     @JoinColumn(name = "unidades_id")
@@ -33,12 +33,12 @@ public class Division {
         this.id = id;
     }
 
-    public String getNomnbre() {
-        return nomnbre;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNomnbre(String nomnbre) {
-        this.nomnbre = nomnbre;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     public Unidad getUnidad() {

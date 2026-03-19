@@ -99,7 +99,7 @@ public class Alumno {
         this.promedio = promedio;
     }
 
-    public boolean isGraduado() {
+    public boolean getGraduado() {
         return graduado;
     }
 

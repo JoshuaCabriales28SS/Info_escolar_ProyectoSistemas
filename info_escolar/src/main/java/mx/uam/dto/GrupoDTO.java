@@ -61,11 +61,11 @@ public class GrupoDTO {
         this.materias_id = materias_id;
     }
 
-    public String getTrimeste() {
+    public String getTrimestre() {
         return trimeste;
     }
 
-    public void setTrimeste(String trimeste) {
+    public void setTrimestre(String trimeste) {
         this.trimeste = trimeste;
     }
 }
