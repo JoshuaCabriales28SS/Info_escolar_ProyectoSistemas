@@ -1,7 +1,5 @@
 package mx.uam.dto;
 
-import mx.uam.entity.Division;
-
 public class CarreraDTO {
 
     private Long id;

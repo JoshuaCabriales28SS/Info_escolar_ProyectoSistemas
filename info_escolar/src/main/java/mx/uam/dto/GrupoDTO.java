@@ -7,19 +7,18 @@ public class GrupoDTO {
     private Long carreras_id;
     private Long profesores_id;
     private Long materias_id;
-    private String trimestre;
+    private String trimeste;
 
     //Constructor vacio(Spring)
     public GrupoDTO(){}
 
     //Constructor Completo
-    public GrupoDTO(Long id, String grupo,Long carreras_id, Long profesores_id, Long materias_id, String trimestre){
+    public GrupoDTO(Long id, String grupo,Long carreras_id, Long profesores_id, Long materias_id, String trimeste){
         this.id = id;
         this.grupo = grupo;
         this.carreras_id = carreras_id;
         this.profesores_id = profesores_id;
         this.materias_id = materias_id;
-        this.trimestre = trimestre;
     }
 
     public Long getId() {
@@ -63,10 +62,10 @@ public class GrupoDTO {
     }
 
     public String getTrimestre() {
-        return trimestre;
+        return trimeste;
     }
 
     public void setTrimestre(String trimeste) {
-        this.trimestre = trimeste;
+        this.trimeste = trimeste;
     }
 }

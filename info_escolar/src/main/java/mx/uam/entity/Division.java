@@ -1,14 +1,21 @@
 package mx.uam.entity;
 
-import jakarta.persistence.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "divisiones")
 public class Division {
-
+    // Atributos
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @Column(name = "nombre")
     private String nombre;
@@ -17,13 +24,12 @@ public class Division {
     @JoinColumn(name = "unidades_id")
     private Unidad unidad;
 
-    // Getters y Setters
-
-    public Long getId() {
+    // Getters Setters
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -42,4 +48,6 @@ public class Division {
     public void setUnidad(Unidad unidad) {
         this.unidad = unidad;
     }
+
+    
 }
