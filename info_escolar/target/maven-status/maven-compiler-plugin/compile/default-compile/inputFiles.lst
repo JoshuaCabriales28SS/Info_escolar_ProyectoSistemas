@@ -1,5 +1,9 @@
+d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\config\SecurityConfig.java
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\config\WebClientConfig.java
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\controller\AlumnoController.java
+d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\controller\api\CarrerasController.java
+d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\controller\api\EmpresaController.java
+d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\controller\api\UniversidadController.java
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\controller\CarreraController.java
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\controller\ControllerJoshua.java
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\controller\DivisionController.java
@@ -43,6 +47,9 @@ d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\ma
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\repository\TutorRepository.java
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\repository\UnidadRepository.java
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\service\AlumnoService.java
+d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\service\api\CarrerasService.java
+d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\service\api\EmpresaService.java
+d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\service\api\UniversidadService.java
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\service\CarreraService.java
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\service\DivisionService.java
 d:\UNIVERSIDAD\CARRERA\8 tri\Sistemas\proyecto\proyecto_code\info_escolar\src\main\java\mx\uam\service\GrupoService.java

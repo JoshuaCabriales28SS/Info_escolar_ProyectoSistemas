@@ -1,0 +1,71 @@
+/* 🎨 Fondo general */
+body {
+    background: linear-gradient(135deg, #1e3c72, #2a5298);
+    min-height: 100vh;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.custom-navbar {
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+.form-contenido {
+    max-width: 400px;
+    margin: 80px auto;
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    animation: fadeIn 0.6s ease-in-out;
+}
+.form-titulo {
+    text-align: center;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #2a5298;
+}
+.campo {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+.campo label {
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #333;
+}
+.email, .pwd {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    transition: all 0.3s ease;
+    outline: none;
+}
+.email:focus, .pwd:focus {
+    border-color: #2a5298;
+    box-shadow: 0 0 5px rgba(42, 82, 152, 0.5);
+}
+.btn-login {
+    width: 100%;
+    margin-top: 15px;
+    background: #2a5298;
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+.btn-login:hover {
+    background: #1e3c72;
+    transform: translateY(-2px);
+}
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

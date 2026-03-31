@@ -7,7 +7,12 @@
 
         area.innerHTML = '<div class="msg"><div class="spinner"></div><p>Cargando…</p></div>';
 
-        fetch(`${API}/${entidad}`)
+        console.log("URL:", `${API}/${entidad}`);
+
+        fetch(`${API}/${entidad}`, {
+            method: "GET",
+            credentials: "include"
+        })
             .then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); return res.json(); })
             .then(data => {
                 const lista = texto ? data.filter(i => JSON.stringify(i).toLowerCase().includes(texto)) : data;
